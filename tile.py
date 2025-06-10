@@ -20,3 +20,7 @@ class Tile:
             neigbour.neigbour['N'] = self
         elif direction == 'W':
             neigbour.neigbour['E'] = self
+    
+    def connect_other(self, tile, direction, return_direction):
+        self.neigbour[direction] = tile
+        tile.neigbour[return_direction] = self
