@@ -7,6 +7,7 @@ Created on Mon Jun  9 08:01:08 2025
 
 import tile
 
+
 def search_word(is_at, direction, word):
     count = 0
     found_word = ''
@@ -33,6 +34,7 @@ def search_word(is_at, direction, word):
         
         is_at = is_at.neigbour[direction]
 
+
 def search_x(tile, word):
     if not tile.type == word[1]:
         return 0
@@ -51,7 +53,7 @@ def search_x(tile, word):
             return 1
     
     return 0
-        
+
 
 with open('Day4Input.txt') as file:
    instructions = file.read().split('\n')

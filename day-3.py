@@ -7,6 +7,7 @@ Created on Sun Jun  8 15:17:53 2025
 
 import re
 
+
 def multyply_if_correct(instruction):
     if len(instruction) < 5:
         return 0
@@ -32,6 +33,7 @@ def multyply_if_correct(instruction):
         return 0
     
     return int(split_instruction[0]) * int(split_instruction[1])
+
 
 with open('Day3Input.txt') as file:
     instructions = file.read()

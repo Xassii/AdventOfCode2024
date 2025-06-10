@@ -23,6 +23,7 @@ def check_report(report):
             return 0
     return 1
 
+
 with open('Day2Input.txt') as file:
     instructions = file.readlines()
 

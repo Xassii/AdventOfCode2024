@@ -22,6 +22,7 @@ def find_operator(result, part, nummbers):
     
     return correct
 
+
 def with_concat(result, part, nummbers):
     if not nummbers:
         if part == result:
@@ -41,6 +42,7 @@ def with_concat(result, part, nummbers):
             return correct
     
     return correct
+
 
 with open('Day7Input.txt') as file:
     instructions = file.readlines()

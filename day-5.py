@@ -8,12 +8,14 @@ Created on Mon Jun  9 09:43:16 2025
 import math
 from collections import defaultdict
 
+
 def check_order(uppdate, rules, length):
     for i in range(length - 1):
         for j in range(i + 1, length):
             if uppdate[i] in rules[uppdate[j]]:
                 return False
     return True
+
 
 def rule_sort(unsorted, rules, length):
     while True:
@@ -27,6 +29,7 @@ def rule_sort(unsorted, rules, length):
         
         if is_sorted:
             return unsorted
+
 
 rules = defaultdict(list)
 uppdates = []
