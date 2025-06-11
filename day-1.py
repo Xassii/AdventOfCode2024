@@ -5,12 +5,11 @@ Created on Sun Jun  8 13:34:10 2025
 @author: amanda
 """
 
-list1 = []
-list2 = []
-result = 0
-
 with open('Day1Input.txt') as file:
     instructions = file.readlines()
+
+list1 = []
+list2 = []
 
 for line in instructions:
     value1, value2 = line.split('   ')
@@ -21,6 +20,8 @@ list1.sort()
 list2.sort()
 
 # --- Part 1 ---
+
+result = 0
 
 for l1, l2 in zip(list1, list2):
     if l1 < l2:
