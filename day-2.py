@@ -27,13 +27,17 @@ def check_report(report):
 with open('Day2Input.txt') as file:
     instructions = file.readlines()
 
+reports = []
+
+for line in instructions:
+    report = line.split(' ')
+    reports.append([int(i) for i in report])
+
 # --- Part 1 ---
 
 result = 0
 
-for line in instructions:
-    report = line.split(' ')
-    report = [int(i) for i in report]
+for report in reports:
     result += check_report(report)
 
 print(f'Part 1: {result}')
@@ -42,10 +46,7 @@ print(f'Part 1: {result}')
 
 result = 0
 
-for line in instructions:
-    report = line.split(' ')
-    report = [int(i) for i in report]
-    
+for report in reports:
     org_result = 0
     org_result = check_report(report)
     if org_result:

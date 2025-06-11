@@ -22,11 +22,11 @@ list2.sort()
 
 # --- Part 1 ---
 
-for i in range(len(list1)):
-    if list1[i] < list2[i]:
-        result += list2[i] - list1[i]
+for l1, l2 in zip(list1, list2):
+    if l1 < l2:
+        result += l2 - l1
     else:
-        result += list1[i] - list2[i]
+        result += l1 - l2
 
 print(f'Part 1: {result}')
 
