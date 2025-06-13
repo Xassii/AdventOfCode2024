@@ -8,7 +8,7 @@ Created on Mon Jun  9 18:34:06 2025
 import collections
 
 class Tile:
-    def __init__(self, char):
+    def __init__(self, char=''):
         self.neigbour = {}
         self.type = char
     
