@@ -5,7 +5,7 @@ Created on Wed Jun 11 18:19:10 2025
 @author: amanda
 """
 
-import tile
+import directionles_tile as tile
 
 with open('Day10Input.txt') as file:
     instructions = file.read().split('\n')
@@ -24,9 +24,9 @@ for x, line in enumerate(instructions):
         
         current = the_map[x][y]
         if x > 0:
-            current.connect_neigbour(the_map[x - 1][y], 'N')
+            current.connect_tile(the_map[x - 1][y])
         if y > 0:
-            current.connect_neigbour(the_map[x][y - 1], 'W')
+            current.connect_tile(the_map[x][y - 1])
 
 for line in the_map:
     for part in line:
