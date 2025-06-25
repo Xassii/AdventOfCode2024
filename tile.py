@@ -8,9 +8,11 @@ Created on Mon Jun  9 18:34:06 2025
 import collections
 
 class Tile:
-    def __init__(self, char=''):
+    def __init__(self, char='', position=(0, 0)):
         self.neigbour = {}
         self.type = char
+        self.position = position
+        self.remember = {}
     
     def connect_neigbour(self, neigbour, direction):
         self.neigbour[direction] = neigbour
