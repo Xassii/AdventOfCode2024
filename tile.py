@@ -28,6 +28,19 @@ class Tile:
     def connect_other(self, tile, direction, return_direction):
         self.neigbour[direction] = tile
         tile.neigbour[return_direction] = self
+    
+    def disconnect_neigbours(self):
+        for direction in self.neigbour.keys():
+            if direction == 'N':
+                self.neigbour['N'].neigbour.pop('S')
+            elif direction == 'E':
+                self.neigbour['E'].neigbour.pop('W')
+            elif direction == 'S':
+                self.neigbour['S'].neigbour.pop('N')
+            elif direction == 'W':
+                self.neigbour['W'].neigbour.pop('E')
+        
+        self.neigbour = {}
 
 
 class GardenPlot(Tile):
